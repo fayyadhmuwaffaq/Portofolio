@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>M. Fayyadh Muwaffaq - Software Engineering Enthusiast</title>
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A3B32',
+                        secondary: '#EAE3D2',
+                        dark: '#2A2A2A',
+                        surface: '#ffffff',
+                        muted: '#6B6B6B',
+                        bordercolor: '#D8D2C5',
+                        bglight: '#FDFBF7'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.05)',
+                        'nav': '0 -1px 0 0 rgba(0,0,0,0.05)',
+                    },
+                    borderRadius: {
+                        'card': '24px',
+                        'btn': '16px',
+                        'badge': '999px',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans min-h-screen pb-24 md:pb-0 overflow-x-hidden text-muted antialiased selection:bg-primary selection:text-white">
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[100] bg-bglight flex items-center justify-center transition-opacity duration-500 ease-out">
+        <div class="relative w-16 h-16">
+            <div class="absolute inset-0 border-4 border-primary/20 rounded-full"></div>
+            <div class="absolute inset-0 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+        </div>
+    </div>
+
+    <!-- MOBILE HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass h-16 flex md:hidden items-center px-6 justify-between">
+        <h1 class="text-xl font-bold text-dark font-heading tracking-tight">Fayyadh.</h1>
+        <div class="flex items-center space-x-4">
+            <a href="https://github.com/fayyadhmuwaffaq" target="_blank" class="text-dark hover:text-primary transition-colors btn-scale">
+                <i class="fa-brands fa-github text-xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/fayyadhmuwaffaq/" target="_blank" class="text-dark hover:text-primary transition-colors btn-scale">
+                <i class="fa-brands fa-linkedin text-xl"></i>
+            </a>
+            <a href="mailto:fayyadh07faiz@gmail.com" class="text-dark hover:text-primary transition-colors btn-scale">
+                <i class="fa-solid fa-envelope text-xl"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- DESKTOP SIDEBAR -->
+    <nav class="hidden md:flex fixed top-0 left-0 sidebar-desktop flex-col py-8 z-50">
+        <div class="mb-8 flex flex-col items-center px-8 text-center">
+            <div class="w-24 h-24 rounded-full bg-secondary mb-4 overflow-hidden border-4 border-white shadow-sm flex items-center justify-center">
+                <img src="img/Hitam Putih.jpg" alt="M. Fayyadh Muwaffaq" srcset="">
+            </div>
+            <h1 class="text-2xl font-bold text-dark font-heading">M. Fayyadh Muwaffaq</h1>
+            <p class="text-xs text-muted mt-1 font-medium">Software Engineering Enthusiast</p>
+        </div>
+        <div class="flex-1 space-y-1 overflow-y-auto">
+            <a href="#hero" class="nav-link-item bg-primary/10 text-primary group">
+                <div class="w-8 h-8 flex items-center justify-center mr-3"><i class="fa-solid fa-house text-lg group-hover:scale-110 transition-transform"></i></div>
+                <span class="text-sm">Home</span>
+            </a>
+            <a href="#about" class="nav-link-item text-muted hover:bg-secondary/50 hover:text-dark group">
+                <div class="w-8 h-8 flex items-center justify-center mr-3"><i class="fa-solid fa-user text-lg group-hover:scale-110 transition-transform"></i></div>
+                <span class="text-sm">About</span>
+            </a>
+            <a href="#journey" class="nav-link-item text-muted hover:bg-secondary/50 hover:text-dark group">
+                <div class="w-8 h-8 flex items-center justify-center mr-3"><i class="fa-solid fa-route text-lg group-hover:scale-110 transition-transform"></i></div>
+                <span class="text-sm">Journey</span>
+            </a>
+            <a href="#projects" class="nav-link-item text-muted hover:bg-secondary/50 hover:text-dark group">
+                <div class="w-8 h-8 flex items-center justify-center mr-3"><i class="fa-solid fa-code text-lg group-hover:scale-110 transition-transform"></i></div>
+                <span class="text-sm">Projects</span>
+            </a>
+            <a href="#experience" class="nav-link-item text-muted hover:bg-secondary/50 hover:text-dark group">
+                <div class="w-8 h-8 flex items-center justify-center mr-3"><i class="fa-solid fa-briefcase text-lg group-hover:scale-110 transition-transform"></i></div>
+                <span class="text-sm">Experience</span>
+            </a>
+            <a href="#skills" class="nav-link-item text-muted hover:bg-secondary/50 hover:text-dark group">
+                <div class="w-8 h-8 flex items-center justify-center mr-3"><i class="fa-solid fa-layer-group text-lg group-hover:scale-110 transition-transform"></i></div>
+                <span class="text-sm">Skills</span>
+            </a>
+        </div>
+        <!-- Desktop Sidebar Footer -->
+        <div class="mt-auto px-8 pt-6 border-t border-bordercolor">
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="https://github.com/fayyadhmuwaffaq" target="_blank" class="text-muted hover:text-primary transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
+                <a href="https://www.linkedin.com/in/fayyadhmuwaffaq/" target="_blank" class="text-muted hover:text-primary transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                <a href="https://www.instagram.com/fy.ydh/" target="_blank" class="text-muted hover:text-primary transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
+            </div>
+            <p class="text-[10px] text-center text-muted font-medium">© 2026 M. Fayyadh Muwaffaq</p>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="main-container-responsive">
+        <main class="max-w-[800px] mx-auto px-6 py-20 md:py-16 space-y-32">
+            
+            <!-- Hero Section -->
+            <section id="hero" class="pt-10 scroll-mt-24">
+                <div class="inline-flex items-center px-4 py-2 bg-secondary text-primary rounded-badge text-xs font-bold mb-8 tracking-wide animate-fade-in shadow-sm border border-bordercolor">
+                    <i class="fa-solid fa-circle text-[8px] mr-2 animate-pulse text-green-600"></i> AVAILABLE FOR HIRE
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12 mb-12 animate-fade-in" style="animation-delay: 0.1s">
+                    <div class="flex-1 text-center md:text-left">
+                        <h1 class="text-5xl md:text-6xl font-black text-dark leading-[1.1] mb-6 tracking-tight font-heading">
+                            Information Systems Student & <span class="text-primary">Software Engineering Enthusiast.</span>
+                        </h1>
+                        <p class="text-lg text-muted leading-relaxed max-w-[540px] mb-10 mx-auto md:mx-0">
+                            Memiliki pengalaman mengembangkan aplikasi web dengan Laravel dan MySQL, serta berpengalaman magang di Software House. Fokus pada solusi digital yang bermanfaat bagi pengguna.
+                        </p>
+                        
+                        <div class="flex flex-row justify-center md:justify-start gap-4 mb-10">
+                            <a href="mailto:fayyadh07faiz@gmail.com" class="px-8 py-4 bg-primary text-white rounded-btn font-semibold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all btn-scale text-sm md:text-base whitespace-nowrap">
+                                Contact Me
+                            </a>
+                            <a href="#contact" class="px-8 py-4 bg-white border border-bordercolor text-dark rounded-btn font-semibold hover:border-primary transition-all btn-scale text-sm md:text-base whitespace-nowrap shadow-sm">
+                                Download CV
+                            </a>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="grid grid-cols-3 gap-4 border-t border-bordercolor pt-8 mt-8">
+                            <div class="text-center md:text-left">
+                                <h4 class="text-2xl font-black text-dark font-heading">3+</h4>
+                                <p class="text-xs text-muted font-medium mt-1 uppercase tracking-wider">Real Projects</p>
+                            </div>
+                            <div class="text-center md:text-left border-l border-bordercolor pl-4">
+                                <h4 class="text-2xl font-black text-dark font-heading">1</h4>
+                                <p class="text-xs text-muted font-medium mt-1 uppercase tracking-wider">Internship</p>
+                            </div>
+                            <div class="text-center md:text-left border-l border-bordercolor pl-4">
+                                <h4 class="text-2xl font-black text-dark font-heading">4+</h4>
+                                <p class="text-xs text-muted font-medium mt-1 uppercase tracking-wider">Years Exp.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="scroll-mt-24">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                    <div class="md:col-span-4">
+                        <h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-4">Profile</h2>
+                        <h3 class="text-3xl font-black text-dark leading-tight font-heading">Kenali Saya Lebih Jauh.</h3>
+                    </div>
+                    <div class="md:col-span-8 space-y-6 text-base text-muted leading-relaxed">
+                        <p>
+                            Saya <span class="text-dark font-bold">Fayyadh</span>, seorang mahasiswa Sistem Informasi di Universitas Hasanuddin dengan latar belakang Rekayasa Perangkat Lunak sejak SMK.
+                        </p>
+                        <p>
+                            Memiliki pengalaman langsung dalam mengembangkan aplikasi web menggunakan <span class="text-dark font-medium">Laravel dan MySQL</span>. Saya pernah terlibat dalam pengembangan sistem manajemen yang digunakan oleh institusi pendidikan maupun perusahaan swasta.
+                        </p>
+                        <p>
+                            Ketertarikan utama saya terletak pada Software Engineering, Web Development, Problem Solving, dan membangun solusi digital yang memberikan impact nyata bagi penggunanya.
+                        </p>
+                        
+                        <div class="mt-8 p-6 bg-secondary/30 rounded-card border border-bordercolor">
+                            <h4 class="text-sm font-bold text-dark uppercase tracking-wider mb-4 flex items-center">
+                                <i class="fa-solid fa-book-open-reader text-primary mr-3 text-lg"></i> Currently Learning
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-white border border-bordercolor rounded-badge text-xs font-semibold text-dark shadow-sm">Vue.js</span>
+                                <span class="px-3 py-1 bg-white border border-bordercolor rounded-badge text-xs font-semibold text-dark shadow-sm">React.js</span>
+                                <span class="px-3 py-1 bg-white border border-bordercolor rounded-badge text-xs font-semibold text-dark shadow-sm">Software Architecture</span>
+                                <span class="px-3 py-1 bg-white border border-bordercolor rounded-badge text-xs font-semibold text-dark shadow-sm">REST API Design</span>
+                                <span class="px-3 py-1 bg-white border border-bordercolor rounded-badge text-xs font-semibold text-dark shadow-sm">UI / UX</span>
+                            </div>
+                            <p class="text-sm text-muted mt-4 italic border-t border-bordercolor pt-4">"Menunjukkan growth mindset untuk terus berkembang menjadi Software Engineer profesional."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Journey Section -->
+            <section id="journey" class="scroll-mt-24">
+                <h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-12 text-center md:text-left">Journey</h2>
+                <div class="relative max-w-2xl mx-auto md:mx-0">
+                    <div class="absolute left-[15px] top-2 bottom-2 w-0.5 bg-bordercolor"></div>
+                    
+                    <div class="space-y-8">
+                        <div class="relative pl-12">
+                            <div class="absolute left-0 top-1 w-8 h-8 bg-white border-2 border-primary rounded-full flex items-center justify-center z-10 shadow-sm">
+                                <div class="w-3 h-3 bg-primary rounded-full"></div>
+                            </div>
+                            <h4 class="text-xl font-bold text-dark font-heading">SMK Ibnul Qayyim Islamic School Makassar</h4>
+                            <p class="text-sm text-muted mt-1">Lulus sebagai <strong class="text-primary">Peserta Didik Terbaik</strong> di jurusan Rekayasa Perangkat Lunak.</p>
+                        </div>
+                        
+                        <div class="relative pl-12">
+                            <div class="absolute left-0 top-1 w-8 h-8 bg-white border-2 border-primary rounded-full flex items-center justify-center z-10 shadow-sm">
+                                <div class="w-3 h-3 bg-primary rounded-full"></div>
+                            </div>
+                            <h4 class="text-xl font-bold text-dark font-heading">Intern at JogjaIde Software House</h4>
+                            <p class="text-sm text-muted mt-1">Magang industri, integrasi API Midtrans, dan pengembangan backend.</p>
+                        </div>
+                        <div class="relative pl-12">
+                            <div class="absolute left-0 top-1 w-8 h-8 bg-white border-2 border-secondary rounded-full flex items-center justify-center z-10 shadow-sm">
+                                <div class="w-3 h-3 bg-secondary rounded-full"></div>
+                            </div>
+                            <h4 class="text-xl font-bold text-dark font-heading">Information Systems Student</h4>
+                            <p class="text-sm text-muted mt-1">Melanjutkan studi di Universitas Hasanuddin (Current).</p>
+                        </div>
+                        
+                        <div class="relative pl-12 opacity-50">
+                            <div class="absolute left-0 top-1 w-8 h-8 bg-white border-2 border-bordercolor border-dashed rounded-full flex items-center justify-center z-10">
+                            </div>
+                            <h4 class="text-xl font-bold text-dark font-heading">Future Software Engineer</h4>
+                            <p class="text-sm text-muted mt-1">Tujuan karir profesional selanjutnya.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="scroll-mt-24">
+                <div class="flex items-center justify-between mb-12">
+                    <h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em]">Featured Projects</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="group bg-white rounded-card overflow-hidden shadow-soft border border-bordercolor hover:border-primary/30 transition-all flex flex-col h-full">
+                        <div class="aspect-video bg-secondary/50 relative overflow-hidden flex items-center justify-center">
+                            <i class="fa-solid fa-school text-5xl text-primary/30 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-3 py-1 bg-secondary/50 rounded-badge text-[10px] font-bold text-primary">School System</span>
+                            </div>
+                            <h4 class="text-2xl font-black text-dark mb-2 font-heading">Simpel-IQIS</h4>
+                            <p class="text-muted text-sm mb-6 leading-relaxed flex-1">
+                                Sistem Informasi Manajemen Sekolah dari jenjang KB hingga SMK. Digunakan langsung oleh institusi pendidikan nyata untuk kebutuhan operasional.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Laravel</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">MySQL</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Vue</span>
+                            </div>
+                            <a href="https://simpel.iqis.sch.id/" target="_blank" class="inline-flex items-center text-sm font-bold text-primary hover:gap-3 transition-all mt-auto w-fit">
+                                Explore <i class="fa-solid fa-arrow-right text-[10px] ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="group bg-white rounded-card overflow-hidden shadow-soft border border-bordercolor hover:border-primary/30 transition-all flex flex-col h-full">
+                        <div class="aspect-video bg-secondary/50 relative overflow-hidden flex items-center justify-center">
+                            <i class="fa-solid fa-briefcase-medical text-5xl text-primary/30 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-3 py-1 bg-secondary/50 rounded-badge text-[10px] font-bold text-primary">Company Profile</span>
+                            </div>
+                            <h4 class="text-2xl font-black text-dark mb-2 font-heading">Sadita.id</h4>
+                            <p class="text-muted text-sm mb-6 leading-relaxed flex-1">
+                                Website profil perusahaan yang difokuskan untuk menampilkan informasi perusahaan, layanan, dan artikel perusahaan.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Tailwind</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Laravel</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">MySQL</span>
+                            </div>
+                            <a href="https://toko.sadita.id/" target="_blank" class="inline-flex items-center text-sm font-bold text-primary hover:gap-3 transition-all mt-auto w-fit">
+                                Explore <i class="fa-solid fa-arrow-right text-[10px] ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="group bg-white rounded-card overflow-hidden shadow-soft border border-bordercolor hover:border-primary/30 transition-all flex flex-col h-full">
+                        <div class="aspect-video bg-secondary/50 relative overflow-hidden flex items-center justify-center">
+                            <i class="fa-solid fa-briefcase-medical text-5xl text-primary/30 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-3 py-1 bg-secondary/50 rounded-badge text-[10px] font-bold text-primary">Catalog Product</span>
+                            </div>
+                            <h4 class="text-2xl font-black text-dark mb-2 font-heading">toko.sadita.id</h4>
+                            <p class="text-muted text-sm mb-6 leading-relaxed flex-1">
+                                Website katalog produk yang difokuskan pada pemasaran dan kebutuhan bisnis nyata.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Tailwind</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Laravel</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">MySQL</span>
+                            </div>
+                            <a href="https://sadita.id/" target="_blank" class="inline-flex items-center text-sm font-bold text-primary hover:gap-3 transition-all mt-auto w-fit">
+                                Explore <i class="fa-solid fa-arrow-right text-[10px] ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="group bg-white rounded-card overflow-hidden shadow-soft border border-bordercolor hover:border-primary/30 transition-all flex flex-col h-full">
+                        <div class="aspect-video bg-secondary/50 relative overflow-hidden flex items-center justify-center">
+                            <i class="fa-solid fa-code text-5xl text-primary/30 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-3 py-1 bg-secondary/50 rounded-badge text-[10px] font-bold text-primary">Project Campus</span>
+                            </div>
+                            <h4 class="text-2xl font-black text-dark mb-2 font-heading">Flow</h4>
+                            <p class="text-muted text-sm mb-6 leading-relaxed flex-1">
+                                Flow is a gamified task management desktop application built using JavaFX.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Java</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Gradle</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">SQLite</span>
+                            </div>
+                            <a href="https://github.com/fayyadhmuwaffaq/Flow" target="_blank" class="inline-flex items-center text-sm font-bold text-primary hover:gap-3 transition-all mt-auto w-fit">
+                                Explore <i class="fa-solid fa-arrow-right text-[10px] ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="group bg-white rounded-card overflow-hidden shadow-soft border border-bordercolor hover:border-primary/30 transition-all flex flex-col h-full md:col-span-2">
+                        <div class="flex flex-col md:flex-row h-full">
+                            <div class="w-full md:w-2/5 aspect-video md:aspect-auto bg-secondary/50 relative overflow-hidden flex items-center justify-center border-b md:border-b-0 md:border-r border-bordercolor">
+                                <i class="fa-solid fa-laptop-code text-5xl text-primary/30 group-hover:scale-110 transition-transform duration-500"></i>
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
+                            </div>
+                            <div class="w-full md:w-3/5 p-8 flex flex-col justify-center">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-secondary/50 rounded-badge text-[10px] font-bold text-primary">Landing Page</span>
+                                </div>
+                                <h4 class="text-2xl font-black text-dark mb-2 font-heading">CMS Pendidikan</h4>
+                                <p class="text-muted text-sm mb-6 leading-relaxed">
+                                    Platform informasi terintegrasi yang menyatukan seluruh unit satuan pendidikan. Berorientasi pada kemudahan informasi bagi pengguna umum dan calon pendaftar.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Laravel</span>
+                                    <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Tailwind</span>
+                                    <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">JavaScript</span>
+                                </div>
+                                <a href="https://fayyadhmuwaffaq.github.io/cms_iqis/" class="inline-flex items-center text-sm font-bold text-primary hover:gap-3 transition-all w-fit">
+                                    Explore <i class="fa-solid fa-arrow-right text-[10px] ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience & Leadership Section -->
+            <section id="experience" class="scroll-mt-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Work Exp -->
+                    <div>
+                        <h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-8">Professional</h2>
+                        <div class="space-y-6">
+                            <div class="p-6 bg-white rounded-card border border-bordercolor shadow-sm">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="text-lg font-bold text-dark font-heading">Intern / PKL</h4>
+                                    <span class="text-xs font-medium text-muted bg-secondary/50 px-2 py-1 rounded-md">3 Bulan</span>
+                                </div>
+                                <p class="text-sm font-medium text-primary mb-4">JogjaIde Software House</p>
+                                <ul class="space-y-2 text-sm text-muted list-disc list-inside">
+                                    <li>Membantu pengembangan backend aplikasi</li>
+                                    <li>Integrasi Payment Gateway Midtrans</li>
+                                    <li>Data entry dan validasi data</li>
+                                    <li>Mendukung tim developer dalam pengembangan fitur</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leadership -->
+                    <div>
+                        <h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-8">Leadership & Org</h2>
+                        <div class="space-y-6">
+                            <div class="p-6 bg-white rounded-card border border-bordercolor shadow-sm">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="text-lg font-bold text-dark font-heading">Team Leader</h4>
+                                    <span class="text-xs font-medium text-muted bg-secondary/50 px-2 py-1 rounded-md">2026</span>
+                                </div>
+                                <p class="text-sm font-medium text-primary mb-3">Flow | Project JavaFX</p>
+                                <p class="text-sm text-muted">Memimpin tim beranggotakan 3 orang, membagi tugas, dan mengarahkan pengembangan aplikasi secara keseluruhan.</p>
+                            </div>
+                            <div class="p-6 bg-white rounded-card border border-bordercolor shadow-sm">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="text-lg font-bold text-dark font-heading">Sekretaris</h4>
+                                    <span class="text-xs font-medium text-muted bg-secondary/50 px-2 py-1 rounded-md">2025</span>
+                                </div>
+                                <p class="text-sm font-medium text-primary mb-3">IQIS Islamic Fest Vol. 3</p>
+                                <p class="text-sm text-muted">Mengelola administrasi, dokumentasi, dan koordinasi pelaksanaan lomba tingkat nasional.</p>
+                            </div>
+                            <div class="p-6 bg-white rounded-card border border-bordercolor shadow-sm">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="text-lg font-bold text-dark font-heading">Ketua OSIS</h4>
+                                    <span class="text-xs font-medium text-muted bg-secondary/50 px-2 py-1 rounded-md">2021</span>
+                                </div>
+                                <p class="text-sm font-medium text-primary mb-3">SMPIT Al-Insyirah</p>
+                                <p class="text-sm text-muted">Memimpin organisasi siswa, mengelola program kerja, serta berkoordinasi dengan pihak sekolah.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Awards -->
+                <div class="mt-12">
+                    <h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-8">Awards & Certificates</h2>
+                    <div class="overflow-hidden w-full relative group">
+                        <!-- Masking edges -->
+                        <div class="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-bglight to-transparent z-10 pointer-events-none"></div>
+                        <div class="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-bglight to-transparent z-10 pointer-events-none"></div>
+                        
+                        <div class="flex gap-6 animate-marquee hover-pause">
+                            <!-- First set of 4 -->
+                            <img src="img/Sertifikat_LKTI.jpg" alt="LKTI Certificate" class="h-40 md:h-48 w-auto object-cover rounded-card shadow-sm cursor-pointer hover:scale-[1.02] hover:shadow-md transition-all border border-bordercolor" onclick="openModal('img/Sertifikat_LKTI.jpg')">
+                            <img src="img/Sertifikar_Webinar.jpg" alt="Webinar Certificate" class="h-40 md:h-48 w-auto object-cover rounded-card shadow-sm cursor-pointer hover:scale-[1.02] hover:shadow-md transition-all border border-bordercolor" onclick="openModal('img/Sertifikar_Webinar.jpg')">
+                            <img src="img/Sertifikat_GUMSB.jpg" alt="GUMSB Certificate" class="h-40 md:h-48 w-auto object-cover rounded-card shadow-sm cursor-pointer hover:scale-[1.02] hover:shadow-md transition-all border border-bordercolor" onclick="openModal('img/Sertifikat_GUMSB.jpg')">
+                            <img src="img/Sertifikar_Webinar.jpg" alt="Webinar Certificate" class="h-40 md:h-48 w-auto object-cover rounded-card shadow-sm cursor-pointer hover:scale-[1.02] hover:shadow-md transition-all border border-bordercolor" onclick="openModal('img/Sertifikar_Webinar.jpg')">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="scroll-mt-24">
+                <h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em] mb-8 text-center md:text-left">Tech Stack</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="p-6 bg-white rounded-card border border-bordercolor shadow-sm text-center">
+                        <i class="fa-brands fa-html5 text-3xl text-dark mb-3"></i>
+                        <h5 class="font-bold text-dark font-heading text-lg mb-2">Frontend</h5>
+                        <p class="text-xs text-muted">HTML, CSS, Tailwind CSS, JavaScript</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-card border border-bordercolor shadow-sm text-center">
+                        <i class="fa-brands fa-laravel text-3xl text-dark mb-3"></i>
+                        <h5 class="font-bold text-dark font-heading text-lg mb-2">Backend</h5>
+                        <p class="text-xs text-muted">PHP, Laravel</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-card border border-bordercolor shadow-sm text-center">
+                        <i class="fa-solid fa-database text-3xl text-dark mb-3"></i>
+                        <h5 class="font-bold text-dark font-heading text-lg mb-2">Database</h5>
+                        <p class="text-xs text-muted">MySQL</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-card border border-bordercolor shadow-sm text-center">
+                        <i class="fa-solid fa-toolbox text-3xl text-dark mb-3"></i>
+                        <h5 class="font-bold text-dark font-heading text-lg mb-2">Tools</h5>
+                        <p class="text-xs text-muted">GitHub, Postman, Figma, Canva</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GitHub Section -->
+            <section id="github" class="scroll-mt-24">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-sm font-bold text-primary uppercase tracking-[0.2em]">GitHub Activity</h2>
+                </div>
+                
+                <!-- Contribution Graph -->
+                <div class="bg-white p-6 md:p-8 rounded-card border border-bordercolor shadow-sm mb-6 overflow-x-auto">
+                    <img src="https://ghchart.rshah.org/4A3B32/fayyadhmuwaffaq" alt="Fayyadh's GitHub Contribution Graph" class="w-full min-w-[600px] opacity-90 hover:opacity-100 transition-opacity">
+                </div>
+
+                <!-- GitHub Action -->
+                <div class="flex justify-center mt-2">
+                    <a href="https://github.com/fayyadhmuwaffaq" target="_blank" class="px-8 py-4 bg-white border border-bordercolor text-dark rounded-btn font-bold hover:border-primary hover:text-primary transition-all shadow-sm flex items-center group">
+                        <i class="fa-brands fa-github text-2xl mr-3 group-hover:scale-110 transition-transform"></i> Kunjungi Profil GitHub
+                    </a>
+                </div>
+            </section>
+
+            <!-- Footer / Contact -->
+            <footer id="contact" class="text-center pb-12 pt-10 scroll-mt-24">
+                <div class="p-10 bg-primary text-white rounded-[32px] shadow-lg relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+                    <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+                    
+                    <h3 class="text-3xl font-black mb-4 font-heading relative z-10">Mari Bekerja Sama!</h3>
+                    <p class="text-secondary/80 mb-8 max-w-md mx-auto text-sm relative z-10">Tertarik untuk berkolaborasi atau memiliki peluang menarik? Jangan ragu untuk menghubungi saya.</p>
+                    
+                    <div class="flex flex-wrap justify-center gap-4 relative z-10">
+                        <a href="mailto:fayyadh07faiz@gmail.com" class="px-6 py-3 bg-white text-primary rounded-btn font-bold hover:bg-secondary transition-colors text-sm shadow-sm flex items-center">
+                            <i class="fa-solid fa-envelope mr-2"></i> Email Me
+                        </a>
+                        <a href="https://www.instagram.com/fy.ydh/" class="px-6 py-3 bg-transparent border border-white/30 text-white rounded-btn font-bold hover:bg-white/10 transition-colors text-sm flex items-center">
+                            <i class="fa-brands fa-instagram mr-2 text-lg"></i> Instagram
+                        </a>
+                        <a href="https://github.com/fayyadhmuwaffaq" target="_blank" class="px-6 py-3 bg-transparent border border-white/30 text-white rounded-btn font-bold hover:bg-white/10 transition-colors text-sm flex items-center">
+                            <i class="fa-brands fa-github mr-2 text-lg"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/fayyadhmuwaffaq/" target="_blank" class="px-6 py-3 bg-transparent border border-white/30 text-white rounded-btn font-bold hover:bg-white/10 transition-colors text-sm flex items-center">
+                            <i class="fa-brands fa-linkedin mr-2 text-lg"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- MOBILE BOTTOM NAVIGATION -->
+    <nav class="fixed bottom-0 left-0 right-0 glass-nav px-6 py-4 flex md:hidden items-center justify-around z-50 shadow-[0_-10px_40px_-10px_rgba(0,0,0,0.1)] rounded-t-[24px]">
+        <a href="#hero" class="mobile-nav-item text-primary"><i class="fa-solid fa-house text-xl"></i><span class="text-[9px] font-bold mt-1">Home</span></a>
+        <a href="#about" class="mobile-nav-item text-muted hover:text-primary transition-colors"><i class="fa-solid fa-user text-xl"></i><span class="text-[9px] font-medium mt-1">About</span></a>
+        <a href="#projects" class="mobile-nav-item text-muted hover:text-primary transition-colors"><i class="fa-solid fa-code text-xl"></i><span class="text-[9px] font-medium mt-1">Projects</span></a>
+        <a href="#experience" class="mobile-nav-item text-muted hover:text-primary transition-colors"><i class="fa-solid fa-briefcase text-xl"></i><span class="text-[9px] font-medium mt-1">Exp</span></a>
+        <a href="#contact" class="mobile-nav-item text-muted hover:text-primary transition-colors"><i class="fa-solid fa-envelope text-xl"></i><span class="text-[9px] font-medium mt-1">Contact</span></a>
+    </nav>
+
+    <!-- Certificate Modal -->
+    <div id="certModal" class="modal-overlay">
+        <button onclick="closeModal()" class="absolute top-6 right-6 text-white text-4xl hover:text-primary transition-colors z-50">&times;</button>
+        <img id="modalImage" src="" alt="Certificate" class="modal-img">
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>
