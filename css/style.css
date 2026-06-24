@@ -45,7 +45,7 @@ html { scroll-behavior: smooth; }
 }
 
 /* Make sidebar fit on small laptop screens */
-@media (max-height: 768px) {
+@media (max-height: 768px) and (min-width: 768px) {
     .sidebar-desktop { margin: 16px; height: calc(100vh - 32px); padding-top: 1rem !important; padding-bottom: 1rem !important; }
     .main-container-responsive { margin-left: 292px; } /* 260 + 16 + 16 */
     
