@@ -3,12 +3,12 @@ window.addEventListener('load', function() {
     setTimeout(function() {
         const preloader = document.getElementById('preloader');
         if(preloader) {
-            preloader.style.opacity = '0';
+            preloader.style.transform = 'translateY(-100%)';
             setTimeout(() => {
                 preloader.style.display = 'none';
-            }, 500);
+            }, 1000); // Wait for slide up animation to complete
         }
-    }, 500);
+    }, 800); // Hold the screen for a bit
 });
 
 // Active State for Navigation
