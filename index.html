@@ -135,7 +135,7 @@
                             Information Systems Student & <span class="text-primary">Software Engineering Enthusiast.</span>
                         </h1>
                         <p class="text-lg text-muted leading-relaxed max-w-[540px] mb-10 mx-auto md:mx-0">
-                            Memiliki pengalaman mengembangkan aplikasi web dengan Laravel dan MySQL, serta berpengalaman magang di Software House. Fokus pada solusi digital yang bermanfaat bagi pengguna.
+                            Memiliki pengalaman mengembangkan aplikasi web dengan Laravel, serta memiliki pengalaman magang di Software House. Fokus pada solusi digital yang bermanfaat bagi pengguna.
                         </p>
                         
                         <div class="flex flex-row justify-center md:justify-start gap-4 mb-10">
@@ -190,8 +190,8 @@
                             </h4>
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-3 py-1 bg-white border border-bordercolor rounded-badge text-xs font-semibold text-dark shadow-sm">Vue.js</span>
-                                <span class="px-3 py-1 bg-white border border-bordercolor rounded-badge text-xs font-semibold text-dark shadow-sm">React.js</span>
-                                <span class="px-3 py-1 bg-white border border-bordercolor rounded-badge text-xs font-semibold text-dark shadow-sm">Software Architecture</span>
+                                <span class="px-3 py-1 bg-white border border-bordercolor rounded-badge text-xs font-semibold text-dark shadow-sm">CI / CD</span>
+                                <span class="px-3 py-1 bg-white border border-bordercolor rounded-badge text-xs font-semibold text-dark shadow-sm">Git &  Github</span>
                                 <span class="px-3 py-1 bg-white border border-bordercolor rounded-badge text-xs font-semibold text-dark shadow-sm">UI / UX</span>
                             </div>
                             <p class="text-sm text-muted mt-4 italic border-t border-bordercolor pt-4">"Tidak ada kata terlambat untuk belajar."</p>
@@ -559,13 +559,30 @@
     </div>
 
     <!-- MOBILE BOTTOM NAVIGATION -->
-    <nav class="fixed bottom-0 left-0 right-0 glass-nav py-4 flex md:hidden items-center justify-evenly z-50 shadow-[0_-10px_40px_-10px_rgba(0,0,0,0.1)] rounded-t-[24px]">
-        <a href="#hero" class="mobile-nav-item text-primary"><i class="fa-solid fa-house text-2xl"></i></a>
-        <a href="#about" class="mobile-nav-item text-muted hover:text-primary transition-colors"><i class="fa-solid fa-user text-2xl"></i></a>
-        <a href="#projects" class="mobile-nav-item text-muted hover:text-primary transition-colors"><i class="fa-solid fa-code text-2xl"></i></a>
-        <a href="#experience" class="mobile-nav-item text-muted hover:text-primary transition-colors"><i class="fa-solid fa-briefcase text-2xl"></i></a>
-        <a href="#contact" class="mobile-nav-item text-muted hover:text-primary transition-colors"><i class="fa-solid fa-envelope text-2xl"></i></a>
-    </nav>
+    <div class="fixed bottom-6 left-4 right-4 z-50 md:hidden flex justify-center">
+        <nav class="glass-nav py-3 px-6 flex items-center justify-between w-full max-w-sm shadow-2xl rounded-card">
+            <a href="#hero" class="mobile-nav-item text-primary group">
+                <i class="fa-solid fa-house text-xl mb-1 group-hover:-translate-y-1 transition-transform"></i>
+                <span class="text-[10px] font-bold">Home</span>
+            </a>
+            <a href="#about" class="mobile-nav-item text-muted hover:text-primary transition-colors group">
+                <i class="fa-solid fa-user text-xl mb-1 group-hover:-translate-y-1 transition-transform"></i>
+                <span class="text-[10px] font-bold">About</span>
+            </a>
+            <a href="#projects" class="mobile-nav-item text-muted hover:text-primary transition-colors group">
+                <i class="fa-solid fa-code text-xl mb-1 group-hover:-translate-y-1 transition-transform"></i>
+                <span class="text-[10px] font-bold">Projects</span>
+            </a>
+            <a href="#experience" class="mobile-nav-item text-muted hover:text-primary transition-colors group">
+                <i class="fa-solid fa-briefcase text-xl mb-1 group-hover:-translate-y-1 transition-transform"></i>
+                <span class="text-[10px] font-bold">Exp</span>
+            </a>
+            <a href="#contact" class="mobile-nav-item text-muted hover:text-primary transition-colors group">
+                <i class="fa-solid fa-envelope text-xl mb-1 group-hover:-translate-y-1 transition-transform"></i>
+                <span class="text-[10px] font-bold">Contact</span>
+            </a>
+        </nav>
+    </div>
 
     <!-- Certificate Modal -->
     <div id="certModal" class="modal-overlay">

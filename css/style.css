@@ -1,7 +1,7 @@
 body { background-color: #FDFBF7; }
 h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; }
 .glass { background: rgba(253, 251, 247, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid #D8D2C5; }
-.glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border-top: 1px solid #D8D2C5; }
+.glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border: 1px solid #D8D2C5; }
 .sidebar-desktop { width: 260px; background-color: #ffffff; border: 1px solid #D8D2C5; border-radius: 24px; margin: 24px; height: calc(100vh - 48px); box-shadow: 0 15px 35px -5px rgba(0,0,0,0.05); }
 .main-container-responsive { margin-left: 0; }
 @media (min-width: 768px) {
