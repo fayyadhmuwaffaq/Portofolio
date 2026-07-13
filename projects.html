@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>All Projects - M. Fayyadh Muwaffaq</title>
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A3B32',
+                        secondary: '#EAE3D2',
+                        dark: '#2A2A2A',
+                        surface: '#ffffff',
+                        muted: '#6B6B6B',
+                        bordercolor: '#D8D2C5',
+                        bglight: '#FDFBF7'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.05)',
+                        'nav': '0 -1px 0 0 rgba(0,0,0,0.05)',
+                    },
+                    borderRadius: {
+                        'card': '24px',
+                        'btn': '16px',
+                        'badge': '999px',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans min-h-screen pb-24 md:pb-0 overflow-x-hidden text-muted antialiased selection:bg-primary selection:text-white">
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[100] bg-primary flex items-center justify-center transition-transform duration-[1000ms] ease-[cubic-bezier(0.76,0,0.24,1)]">
+        <h1 class="text-3xl md:text-5xl font-black text-white font-heading tracking-widest animate-pulse">
+            Projects
+        </h1>
+    </div>
+
+    <!-- MOBILE HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass h-16 flex md:hidden items-center px-6 justify-between">
+        <h1 class="text-xl font-bold text-dark font-heading tracking-tight">Fayyadh.</h1>
+        <div class="flex items-center space-x-4">
+            <a href="https://github.com/fayyadhmuwaffaq" target="_blank" class="text-dark hover:text-primary transition-colors btn-scale">
+                <i class="fa-brands fa-github text-xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/fayyadhmuwaffaq/" target="_blank" class="text-dark hover:text-primary transition-colors btn-scale">
+                <i class="fa-brands fa-linkedin text-xl"></i>
+            </a>
+            <a href="mailto:fayyadh07faiz@gmail.com" class="text-dark hover:text-primary transition-colors btn-scale">
+                <i class="fa-solid fa-envelope text-xl"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- DESKTOP SIDEBAR -->
+    <nav class="hidden md:flex fixed top-0 left-0 sidebar-desktop flex-col py-8 z-50">
+        <div class="mb-8 flex flex-col items-center px-8 text-center profile-section">
+            <div class="w-24 h-24 rounded-full bg-secondary mb-4 overflow-hidden border-4 border-white shadow-sm flex items-center justify-center profile-image">
+                <img src="img/Hitam Putih.jpg" alt="M. Fayyadh Muwaffaq" srcset="">
+            </div>
+            <h1 class="text-2xl font-bold text-dark font-heading profile-name">M. Fayyadh Muwaffaq</h1>
+            <p class="text-xs text-muted mt-1 font-medium">Software Engineering Enthusiast</p>
+        </div>
+        <div class="flex-1 space-y-1 overflow-y-auto no-scrollbar">
+            <a href="index.html#hero" class="nav-link-item text-muted hover:bg-secondary/50 hover:text-dark group">
+                <div class="w-8 h-8 flex items-center justify-center mr-3"><i class="fa-solid fa-house text-lg group-hover:scale-110 transition-transform"></i></div>
+                <span class="text-sm">Home</span>
+            </a>
+            <a href="index.html#about" class="nav-link-item text-muted hover:bg-secondary/50 hover:text-dark group">
+                <div class="w-8 h-8 flex items-center justify-center mr-3"><i class="fa-solid fa-user text-lg group-hover:scale-110 transition-transform"></i></div>
+                <span class="text-sm">About</span>
+            </a>
+            <a href="index.html#journey" class="nav-link-item text-muted hover:bg-secondary/50 hover:text-dark group">
+                <div class="w-8 h-8 flex items-center justify-center mr-3"><i class="fa-solid fa-route text-lg group-hover:scale-110 transition-transform"></i></div>
+                <span class="text-sm">Journey</span>
+            </a>
+            <a href="projects.html" class="nav-link-item bg-primary/10 text-primary group">
+                <div class="w-8 h-8 flex items-center justify-center mr-3"><i class="fa-solid fa-code text-lg group-hover:scale-110 transition-transform"></i></div>
+                <span class="text-sm">Projects</span>
+            </a>
+            <a href="index.html#experience" class="nav-link-item text-muted hover:bg-secondary/50 hover:text-dark group">
+                <div class="w-8 h-8 flex items-center justify-center mr-3"><i class="fa-solid fa-briefcase text-lg group-hover:scale-110 transition-transform"></i></div>
+                <span class="text-sm">Experience</span>
+            </a>
+            <a href="index.html#skills" class="nav-link-item text-muted hover:bg-secondary/50 hover:text-dark group">
+                <div class="w-8 h-8 flex items-center justify-center mr-3"><i class="fa-solid fa-layer-group text-lg group-hover:scale-110 transition-transform"></i></div>
+                <span class="text-sm">Skills</span>
+            </a>
+        </div>
+        <!-- Desktop Sidebar Footer -->
+        <div class="mt-auto px-8 pt-6 border-t border-bordercolor sidebar-footer">
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="https://github.com/fayyadhmuwaffaq" target="_blank" class="text-muted hover:text-primary transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
+                <a href="https://www.linkedin.com/in/fayyadhmuwaffaq/" target="_blank" class="text-muted hover:text-primary transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                <a href="https://www.instagram.com/fy.ydh/" target="_blank" class="text-muted hover:text-primary transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
+            </div>
+            <p class="text-[10px] text-center text-muted font-medium">© 2026 M. Fayyadh Muwaffaq</p>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="main-container-responsive">
+        <main class="max-w-[800px] mx-auto px-6 py-20 md:py-16 space-y-20">
+            
+            <!-- Hero / Title Section -->
+            <section class="pt-10">
+                <a href="index.html" class="inline-flex items-center text-sm font-bold text-muted hover:text-primary transition-colors mb-8 group">
+                    <i class="fa-solid fa-arrow-left mr-2 group-hover:-translate-x-1 transition-transform"></i> Kembali ke Beranda
+                </a>
+                <h1 class="text-4xl md:text-5xl font-black text-dark leading-tight mb-4 font-heading">
+                    Semua <span class="text-primary">Proyek Saya</span>
+                </h1>
+                <p class="text-lg text-muted max-w-xl">
+                    Berikut adalah seluruh proyek yang pernah saya kerjakan
+                </p>
+            </section>
+
+            <!-- All Projects Section -->
+            <section id="all-projects">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="group bg-white rounded-card overflow-hidden shadow-soft border border-bordercolor hover:border-primary/30 transition-all flex flex-col h-full">
+                        <div class="aspect-video bg-secondary/50 relative overflow-hidden flex items-center justify-center">
+                            <img src="img/simpel.jpeg" alt="tampilan simpel-iqis" class="w-full h-full object-cover transition-transform duration-500">
+                            <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-3 py-1 bg-secondary/50 rounded-badge text-[10px] font-bold text-primary">School System</span>
+                            </div>
+                            <h4 class="text-2xl font-black text-dark mb-2 font-heading">Simpel-IQIS</h4>
+                            <p class="text-muted text-sm mb-6 leading-relaxed flex-1">
+                                Sistem Informasi Manajemen Sekolah dari jenjang KB hingga SMK. Digunakan langsung oleh institusi pendidikan nyata untuk kebutuhan operasional.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Laravel</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">MySQL</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Vue</span>
+                            </div>
+                            <div class="flex items-center justify-between mt-auto w-full pt-4 border-t border-bordercolor/50">
+                                <button onclick='openProjectModal({image:"img/simpel.jpeg", icon:"fa-school", category:"School System", year:"2026", title:"Simpel-IQIS", role:"Quality Assurance", desc:"Sistem Informasi Manajemen Sekolah dari jenjang KB hingga SMK. Digunakan langsung oleh institusi pendidikan nyata untuk kebutuhan operasional.", tech:["Laravel", "MySQL", "Vue"], live:"https://simpel.iqis.sch.id/", repo:"#"})' class="inline-flex items-center text-xs font-bold text-primary hover:gap-2 transition-all cursor-pointer bg-transparent border-0 p-0 m-0">
+                                    Detail <i class="fa-solid fa-arrow-right text-[10px] ml-2"></i>
+                                </button>
+                                <div class="flex items-center gap-2">
+                                    <a href="https://simpel.iqis.sch.id/" target="_blank" class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary/30 text-primary hover:bg-primary hover:text-white transition-colors border border-bordercolor" title="Live Preview">
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="group bg-white rounded-card overflow-hidden shadow-soft border border-bordercolor hover:border-primary/30 transition-all flex flex-col h-full">
+                        <div class="aspect-video bg-secondary/50 relative overflow-hidden flex items-center justify-center">
+                            <i class="fa-solid fa-briefcase-medical text-5xl text-primary/30 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-3 py-1 bg-secondary/50 rounded-badge text-[10px] font-bold text-primary">Company Profile</span>
+                            </div>
+                            <h4 class="text-2xl font-black text-dark mb-2 font-heading">Sadita.id</h4>
+                            <p class="text-muted text-sm mb-6 leading-relaxed flex-1">
+                                Website profil perusahaan yang difokuskan untuk menampilkan informasi perusahaan, layanan, dan artikel perusahaan.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Tailwind</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Laravel</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">MySQL</span>
+                            </div>
+                            <div class="flex items-center justify-between mt-auto w-full pt-4 border-t border-bordercolor/50">
+                                <button onclick='openProjectModal({icon:"fa-briefcase-medical", category:"Company Profile", year:"2025", title:"Sadita.id", role:"Frontend Developer", desc:"Website profil perusahaan yang difokuskan untuk menampilkan informasi perusahaan, layanan, dan artikel perusahaan.", tech:["Tailwind", "Laravel", "MySQL"], live:"https://sadita.id/", repo:"#"})' class="inline-flex items-center text-xs font-bold text-primary hover:gap-2 transition-all cursor-pointer bg-transparent border-0 p-0 m-0">
+                                    Detail <i class="fa-solid fa-arrow-right text-[10px] ml-2"></i>
+                                </button>
+                                <div class="flex items-center gap-2">
+                                    <a href="https://sadita.id/" target="_blank" class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary/30 text-primary hover:bg-primary hover:text-white transition-colors border border-bordercolor" title="Live Preview">
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="group bg-white rounded-card overflow-hidden shadow-soft border border-bordercolor hover:border-primary/30 transition-all flex flex-col h-full">
+                        <div class="aspect-video bg-secondary/50 relative overflow-hidden flex items-center justify-center">
+                            <i class="fa-solid fa-briefcase-medical text-5xl text-primary/30 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-3 py-1 bg-secondary/50 rounded-badge text-[10px] font-bold text-primary">Catalog Product</span>
+                            </div>
+                            <h4 class="text-2xl font-black text-dark mb-2 font-heading">toko.sadita.id</h4>
+                            <p class="text-muted text-sm mb-6 leading-relaxed flex-1">
+                                Website katalog produk yang difokuskan pada pemasaran dan kebutuhan bisnis nyata.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Tailwind</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Laravel</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">MySQL</span>
+                            </div>
+                            <div class="flex items-center justify-between mt-auto w-full pt-4 border-t border-bordercolor/50">
+                                <button onclick='openProjectModal({icon:"fa-briefcase-medical", category:"Catalog Product", year:"2025", title:"toko.sadita.id", role:"Quality Assurance & Data Entry", desc:"Website katalog produk yang difokuskan pada pemasaran dan kebutuhan bisnis nyata.", tech:["Tailwind", "Laravel", "MySQL"], live:"https://toko.sadita.id/", repo:"#"})' class="inline-flex items-center text-xs font-bold text-primary hover:gap-2 transition-all cursor-pointer bg-transparent border-0 p-0 m-0">
+                                    Detail <i class="fa-solid fa-arrow-right text-[10px] ml-2"></i>
+                                </button>
+                                <div class="flex items-center gap-2">
+                                    <a href="https://toko.sadita.id/" target="_blank" class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary/30 text-primary hover:bg-primary hover:text-white transition-colors border border-bordercolor" title="Live Preview">
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="group bg-white rounded-card overflow-hidden shadow-soft border border-bordercolor hover:border-primary/30 transition-all flex flex-col h-full">
+                        <div class="aspect-video bg-secondary/50 relative overflow-hidden flex items-center justify-center">
+                            <i class="fa-solid fa-code text-5xl text-primary/30 group-hover:scale-110 transition-transform duration-500"></i>
+                            <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
+                        </div>
+                        <div class="p-8 flex flex-col flex-1">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-3 py-1 bg-secondary/50 rounded-badge text-[10px] font-bold text-primary">Project Campus</span>
+                            </div>
+                            <h4 class="text-2xl font-black text-dark mb-2 font-heading">Flow</h4>
+                            <p class="text-muted text-sm mb-6 leading-relaxed flex-1">
+                                Flow is a gamified task management desktop application built using JavaFX.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Java</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Gradle</span>
+                                <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">SQLite</span>
+                            </div>
+                            <div class="flex items-center justify-between mt-auto w-full pt-4 border-t border-bordercolor/50">
+                                <button onclick='openProjectModal({icon:"fa-code", category:"Project Campus", year:"2026", title:"Flow", role:"Team Leader & Programmer", desc:"Flow is a gamified task management desktop application built using JavaFX.", tech:["Java", "Gradle", "SQLite"], live:"#", repo:"https://github.com/fayyadhmuwaffaq/Flow"})' class="inline-flex items-center text-xs font-bold text-primary hover:gap-2 transition-all cursor-pointer bg-transparent border-0 p-0 m-0">
+                                    Detail <i class="fa-solid fa-arrow-right text-[10px] ml-2"></i>
+                                </button>
+                                <div class="flex items-center gap-2">
+                                    <a href="https://github.com/fayyadhmuwaffaq/Flow" target="_blank" class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary/30 text-primary hover:bg-primary hover:text-white transition-colors border border-bordercolor" title="Repository">
+                                        <i class="fa-brands fa-github text-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="group bg-white rounded-card overflow-hidden shadow-soft border border-bordercolor hover:border-primary/30 transition-all flex flex-col h-full md:col-span-2">
+                        <div class="flex flex-col md:flex-row h-full">
+                            <div class="w-full md:w-2/5 aspect-video md:aspect-auto bg-secondary/50 relative overflow-hidden flex items-center justify-center border-b md:border-b-0 md:border-r border-bordercolor">
+                                <img src="img/cms-iqis.png" alt="tampilan cms-iqis" class="w-full h-full object-cover transition-transform duration-500">
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors"></div>
+                            </div>
+                            <div class="w-full md:w-3/5 p-8 flex flex-col justify-center">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-secondary/50 rounded-badge text-[10px] font-bold text-primary">Landing Page</span>
+                                </div>
+                                <h4 class="text-2xl font-black text-dark mb-2 font-heading">CMS Pendidikan</h4>
+                                <p class="text-muted text-sm mb-6 leading-relaxed">
+                                    Platform informasi terintegrasi yang menyatukan seluruh unit satuan pendidikan. Berorientasi pada kemudahan informasi bagi pengguna umum dan calon pendaftar.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Laravel</span>
+                                    <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">Tailwind</span>
+                                    <span class="text-xs font-semibold text-dark border border-bordercolor rounded-md px-2 py-1">JavaScript</span>
+                                </div>
+                                <div class="flex items-center justify-between mt-auto w-full pt-4 border-t border-bordercolor/50">
+                                    <button onclick='openProjectModal({image:"img/cms-iqis.png",icon:"fa-laptop-code", category:"Landing Page", year:"2026", title:"CMS Pendidikan", role:"Fullstack Developer", desc:"Platform informasi terintegrasi yang menyatukan seluruh unit satuan pendidikan. Berorientasi pada kemudahan informasi bagi pengguna umum dan calon pendaftar.", tech:["Laravel", "Tailwind", "JavaScript"], live:"https://kdm-developers.github.io/cms_iqis/", repo:"https://github.com/kdm-developers/cms_iqis"})' class="inline-flex items-center text-xs font-bold text-primary hover:gap-2 transition-all cursor-pointer bg-transparent border-0 p-0 m-0">
+                                        Detail <i class="fa-solid fa-arrow-right text-[10px] ml-2"></i>
+                                    </button>
+                                    <div class="flex items-center gap-2">
+                                        <a href="https://github.com/kdm-developers/cms_iqis" target="_blank" class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary/30 text-primary hover:bg-primary hover:text-white transition-colors border border-bordercolor" title="Repository">
+                                            <i class="fa-brands fa-github text-sm"></i>
+                                        </a>
+                                        <a href="https://kdm-developers.github.io/cms_iqis/" target="_blank" class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary/30 text-primary hover:bg-primary hover:text-white transition-colors border border-bordercolor" title="Live Preview">
+                                            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- MOBILE BOTTOM NAVIGATION -->
+    <div class="fixed bottom-6 left-4 right-4 z-50 md:hidden flex justify-center">
+        <nav class="glass-nav py-3 px-6 flex items-center justify-between w-full max-w-sm shadow-2xl rounded-card">
+            <a href="index.html#hero" class="mobile-nav-item text-muted hover:text-primary transition-colors group">
+                <i class="fa-solid fa-house text-xl mb-1 group-hover:-translate-y-1 transition-transform"></i>
+                <span class="text-[10px] font-bold">Home</span>
+            </a>
+            <a href="index.html#about" class="mobile-nav-item text-muted hover:text-primary transition-colors group">
+                <i class="fa-solid fa-user text-xl mb-1 group-hover:-translate-y-1 transition-transform"></i>
+                <span class="text-[10px] font-bold">About</span>
+            </a>
+            <a href="projects.html" class="mobile-nav-item text-primary group">
+                <i class="fa-solid fa-code text-xl mb-1 group-hover:-translate-y-1 transition-transform"></i>
+                <span class="text-[10px] font-bold">Projects</span>
+            </a>
+            <a href="index.html#experience" class="mobile-nav-item text-muted hover:text-primary transition-colors group">
+                <i class="fa-solid fa-briefcase text-xl mb-1 group-hover:-translate-y-1 transition-transform"></i>
+                <span class="text-[10px] font-bold">Exp</span>
+            </a>
+            <a href="index.html#contact" class="mobile-nav-item text-muted hover:text-primary transition-colors group">
+                <i class="fa-solid fa-envelope text-xl mb-1 group-hover:-translate-y-1 transition-transform"></i>
+                <span class="text-[10px] font-bold">Contact</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="modal-overlay z-[110]">
+        <div class="bg-white w-[90%] max-w-2xl rounded-[32px] shadow-2xl overflow-hidden relative transform transition-transform scale-90 opacity-0" id="projectModalContent">
+            <!-- Close Button -->
+            <button onclick="closeProjectModal()" class="absolute top-6 right-6 w-10 h-10 bg-bglight/50 hover:bg-secondary/50 rounded-full flex items-center justify-center text-dark hover:text-primary transition-colors z-10 backdrop-blur-sm shadow-sm cursor-pointer border-none outline-none">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            
+            <!-- Banner / Icon -->
+            <div class="w-full h-48 bg-secondary/50 flex items-center justify-center relative border-b border-bordercolor/50 overflow-hidden">
+                <img id="pm-img" src="" alt="Project Image" class="w-full h-full object-cover absolute inset-0 z-0 hidden">
+                <i id="pm-icon" class="fa-solid fa-laptop-code text-6xl text-primary/30 z-0"></i>
+                <div class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
+            </div>
+            
+            <!-- Content -->
+            <div class="p-8 -mt-10 relative z-10">
+                <div class="flex items-center gap-2 mb-3">
+                    <span id="pm-category" class="px-3 py-1 bg-secondary rounded-badge text-[10px] font-bold text-primary">Category</span>
+                    <span id="pm-year" class="px-3 py-1 bg-bglight border border-bordercolor rounded-badge text-[10px] font-bold text-muted">Year</span>
+                </div>
+                
+                <h3 id="pm-title" class="text-3xl font-black text-dark mb-4 font-heading">Project Title</h3>
+                
+                <div class="mb-4 bg-bglight p-4 rounded-xl border border-bordercolor flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-full bg-secondary/50 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-user-tag text-primary text-sm"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-bold text-muted uppercase tracking-widest mb-1">Peran Saya</p>
+                        <p id="pm-role" class="text-sm font-bold text-dark">Role Name</p>
+                    </div>
+                </div>
+                
+                <p id="pm-desc" class="text-muted text-sm leading-relaxed mb-6">
+                    Project description goes here...
+                </p>
+                
+                <div id="pm-tech" class="flex flex-wrap gap-2 mb-8">
+                    <!-- Tech stack inserted via JS -->
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="flex gap-4 border-t border-bordercolor pt-6">
+                    <a id="pm-live" href="#" target="_blank" class="flex-1 text-center py-3 bg-primary text-white rounded-btn font-bold hover:bg-primary/90 transition-colors text-sm shadow-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Preview
+                    </a>
+                    <a id="pm-repo" href="#" target="_blank" class="flex-1 text-center py-3 bg-white border border-bordercolor text-dark rounded-btn font-bold hover:border-primary hover:text-primary transition-colors text-sm shadow-sm flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-github text-lg"></i> Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>
